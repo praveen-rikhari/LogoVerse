@@ -8,5 +8,8 @@ export default {
     logoDescDesc:'Share your ideas, themes, or inspirations to help create a logo that truly reflects your brand.',
     logoColorPaletteTitle:'Select Your Color Palette',
     logoColorPaletteDesc:'Choose the colors that best represent your brand personality and leave a memorable impact.',
+    logoDesignTitle:"Pick Your Logo Style",
+    logoDesignDesc:"Choose the logo design that most effectively reflects your brand's unique identity."
+    
   };
   
