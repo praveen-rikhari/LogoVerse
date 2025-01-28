@@ -18,6 +18,8 @@ function CreateLogo() {
             ...prev,
             [field]: value
         }))
+
+        console.log(formData)
     }
 
     return (
