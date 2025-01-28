@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
+import Hero from "./_components/Hero";
 
 export default function Home() {
   return (
     <div>
-      <h1>Parveen Ji</h1>
-      <Button>Click !</Button>
+      <Hero />
     </div>
   );
 }
