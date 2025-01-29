@@ -12,7 +12,7 @@ function LogoDesc({onHandleInputChange , formData}) {
 
       <input type="text" placeholder='Enter logo description...'
         className='p-4 border rounded-lg mt-5 w-full'
-        value={formData?.desc}
+        defaultValue={formData?.desc}
         onChange={(e) => onHandleInputChange(e.target.value)}
       />
     </div>

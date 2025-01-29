@@ -12,7 +12,7 @@ function LogoTitle({onHandleInputChange}) {
     return (
         <div className='my-6'>
             <HeadingDescription
-                title={Lookup.logoTitle}
+                title={Lookup?.logoTitle}
                 description={Lookup.logoDescription}
             />
 
