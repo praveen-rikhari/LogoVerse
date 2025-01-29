@@ -4,8 +4,8 @@ import Lookup from '@/app/_data/Lookup';
 import Design from '@/app/_data/Design';
 import Image from 'next/image';
 
-function LogoDesigns({onHandleInputChange}) {
-  const [selectedDesign, setSelectedDesign] = useState();
+function LogoDesigns({ onHandleInputChange , formData}) {
+  const [selectedDesign, setSelectedDesign] = useState(formData?.design?.title);
 
   return (
     <div className='my-10'>
@@ -31,6 +31,10 @@ function LogoDesigns({onHandleInputChange}) {
                 height={200}
                 className='w-full rounded-xl'
               />
+
+              <h2 className='text-center mt-3 font-medium text-lg text-[#023047]'>
+                {design.title}
+              </h2>
             </div>
           ))
         }

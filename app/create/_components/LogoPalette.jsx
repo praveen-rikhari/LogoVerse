@@ -4,8 +4,8 @@ import HeadingDescription from './HeadingDescription'
 import Lookup from '@/app/_data/Lookup'
 import Colors from '@/app/_data/Colors'
 
-function LogoPalette({ onHandleInputChange }) {
-  const [selectedPalette, setSelectedPalette] = useState();
+function LogoPalette({ onHandleInputChange, formData }) {
+  const [selectedPalette, setSelectedPalette] = useState(formData?.palette);
 
   return (
     <div className='my-10'>
