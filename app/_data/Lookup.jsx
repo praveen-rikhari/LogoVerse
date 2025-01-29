@@ -12,5 +12,32 @@ export default {
   logoDesignDesc: "Choose the logo design that most effectively reflects your brand's unique identity.",
   LogoIdeaTitle: "Share a Design Idea",
   LogoIdeaDesc: "Pick a style that best suits your vision, or skip to get a random suggestion.",
+  logoPricingModelTitle: 'Select your AI Model Plan',
+  logoPricingModelDesc: 'Generate Unlimted Fast Logo with your favourite AI model.',
+  pricingOption: [
+    {
+      title: 'Free',
+      icon: '/free.png',
+      features: [
+        '⚫ Generate unlimited logos for free',
+        '⚫ Longer wait times',
+        '⚫ Wait time: 30 seconds to 3 minutes',
+        '⚫ Limited Design Options and Quality',
+        '⚫ Slow (Not Recommended)'
+      ],
+      button: 'Generate Free'
+    },
+    {
+      title: 'Premium',
+      icon: '/thunder.png',
+      features: [
+        '⚫ Generate unlimited logos',
+        '⚫ Shorter wait times',
+        '⚫ Wait time: Less than 10 seconds',
+        '⚫ Only 5 Credits',
 
+      ],
+      button: 'Generate For 1 Credit'
+    }
+  ],
 };

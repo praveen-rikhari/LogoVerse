@@ -19,7 +19,7 @@ function LogoIdea({ formData, onHandleInputChange }) {
 
     setLoading(true)
     const PROMPT = Prompt.DESIGN_IDEA_PROMPT
-      .replace('{logoType}', formData.design.title)
+      .replace('{logoType}', formData?.design.title)
       .replace('{logoTitle}', formData.title)
       .replace('{logoDesc}', formData.desc)
       .replace('{logoPrompt}', formData.design.prompt)
@@ -31,7 +31,7 @@ function LogoIdea({ formData, onHandleInputChange }) {
     })
 
     console.log(result.data)
-    setIdeas(result.data.ideas);
+    !ideas && setIdeas(result.data.ideas);
     setLoading(false);
   }
 
@@ -54,14 +54,14 @@ function LogoIdea({ formData, onHandleInputChange }) {
           ideas && ideas.map((item, index) => (
             <h2 key={index}
               onClick={() => {
-                setSelectedOption(item);
-                onHandleInputChange(item)
+                setSelectedOption(item.description);
+                onHandleInputChange(item.description)
               }}
               className={
                 `p-2 rounded-full border px-3 cursor-pointer
-          hover:border-primary ${selectedOption == item && 'border-primary'}`
+          hover:border-primary ${selectedOption == item.description && 'border-primary'}`
               }
-            >{item}</h2>
+            >{item.description}</h2>
           ))
         }
         <h2
