@@ -1,10 +1,18 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HeadingDescription from './HeadingDescription'
 import Lookup from '@/app/_data/Lookup'
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 
-function PricingModel() {
+function PricingModel({ formData }) {
+
+  // Saving formData to local storage....
+  useEffect(() => {
+    if (formData?.title && typeof window != 'undefined') {
+      localStorage.setItem('formData', JSON.stringify(formData));
+    }
+  }, [formData])
+
   return (
     <div className=''>
       <HeadingDescription
