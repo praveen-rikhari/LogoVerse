@@ -1,10 +1,14 @@
+"use client"
 import React, { useEffect } from 'react'
 import HeadingDescription from './HeadingDescription'
 import Lookup from '@/app/_data/Lookup'
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
+import { SignInButton, useUser } from '@clerk/nextjs';
 
 function PricingModel({ formData }) {
+
+  const { user } = useUser();
 
   // Saving formData to local storage....
   useEffect(() => {
@@ -44,9 +48,18 @@ function PricingModel({ formData }) {
                 }
               </div>
 
-              <Button className="mt-5">
-                {pricing.button}
-              </Button>
+              {
+                user ?
+                  <Button className="mt-5">
+                    {pricing.button}
+                  </Button>
+                  :
+                  <SignInButton mode='modal' forceRedirectUrl={'/generate-logo?type=' + pricing.title}>
+                    <Button className="mt-5">
+                      {pricing.button}
+                    </Button>
+                  </SignInButton>
+              }
 
             </div>
           ))

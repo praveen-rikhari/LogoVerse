@@ -1,6 +1,8 @@
-import {Fredoka} from "next/font/google";
+import { Fredoka } from "next/font/google";
 import "./globals.css";
 import Provider from "./provider";
+
+import { ClerkProvider } from '@clerk/nextjs';
 
 const fredoka = Fredoka({
   subsets: ["latin"],
@@ -13,14 +15,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={fredoka.className}
-      >
-        <Provider>
-          {children}
-        </Provider>
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body
+          className={fredoka.className}
+        >
+          <Provider>
+            {children}
+          </Provider>
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

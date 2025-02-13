@@ -2,6 +2,12 @@ import React from 'react'
 import Header from './_components/Header'
 
 function Provider({ children }) {
+
+    // save user data
+    const CheckUserAuth = () => {
+        // Save user to Database
+    }
+
     return (
         <div>
             <Header />
