@@ -37,5 +37,23 @@ export const AIDesignIdea = model.startChat({
     ],
 });
 
+export const AILogoPrompt = model.startChat({
+    generationConfig,
+    history: [
+        {
+            role: "user",
+            parts: [
+                { text: "Generate a text prompt to create Logo for Logo Title/Brand name : cricket,with description: live score app, with Color combination of Forest Greens, also include the {logoIdea} and include Vinatge Custom Logos design idea and referring to this Logo Prompt:Generate a vintage, hand-drawn logo in a circular format. The logo should feature a central illustration, such as a symbol, icon, or image related to the brands identity. The illustration should be detailed and stylized, with a focus on linework and shading. The logo should also include the brand name, written in a vintage, decorative font. The overall aesthetic should be retro and nostalgic, evoking a sense of tradition and quality.  Give me result in JSON portal with prompt field only" },
+            ],
+        },
+        {
+            role: "model",
+            parts: [
+                { text: "I am currently unable to generate images, as that capability is only enabled for early testers. However, I can provide you with the text prompt in JSON format as you requested.\n\n```json\n{\n  \"prompt\": \"Generate a vintage, hand-drawn logo in a circular format for 'Cricket: Live Score App'. The color combination should primarily be Forest Greens. The logo should feature a central illustration of {logoIdea} (e.g., a cricket ball bursting through a vintage scoreboard, a stylized cricket bat and ball arrangement, or a classic cricket player silhouette). The illustration should be detailed and stylized, with a focus on linework and shading reminiscent of vintage custom logos. The brand name 'Cricket' should be written in a vintage, decorative font incorporated into the circular design. The overall aesthetic should be retro and nostalgic, evoking a sense of tradition, quality, and the excitement of live cricket scores.\"\n}\n```\n" },
+            ],
+        },
+    ],
+});
+
 // const result = await chatSession.sendMessage("INSERT_INPUT_HERE");
 // console.log(result.response.text());
