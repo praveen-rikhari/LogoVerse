@@ -25,49 +25,55 @@ function PricingModel({ formData }) {
         description={Lookup.logoPricingModelDesc}
       />
 
-      <div className='grid grid-cols-1 md:grid-cols-2 gap-10 mt-5'>
-        {
-          Lookup.pricingOption.map((pricing, index) => (
-            <div className='flex flex-col items-center p-5 border rounded-2xl' key={index}>
-              <Image
-                src={pricing.icon}
-                alt={pricing.title}
-                width={60} height={60}
-              />
+      <div className="flex justify-center items-center mt-5">
+        <div className="w-full max-w-sm">
+          {
+            Lookup.pricingOption.map((pricing, index) => (
+              <div className="flex flex-col items-center p-5 w-full mx-auto" key={index}>
+                <Image
+                  src={pricing.icon}
+                  alt={pricing.title}
+                  width={60}
+                  height={60}
+                />
 
-              <h2 className='font-md text:2xl text-[#023047]'>
-                {pricing.title}
-              </h2>
+                <h2 className="font-md text-2xl text-[#023047] mt-3 text-center">
+                  {pricing.title}
+                </h2>
 
-              <div>
+                <div className="text-center">
+                  {
+                    pricing.features.map((feature) => (
+                      <h2 className="text-lg mt-2 text-gray-700 flex items-center justify-center" key={feature}>
+                        {feature}
+                      </h2>
+                    ))
+                  }
+                </div>
+
                 {
-                  pricing.features.map((feature, index) => (
-                    <h2 className='text-lg mt-2 text-gray-700' key={feature}>
-                      {feature}
-                    </h2>
-                  ))
+                  user ?
+                    <Link href={'/generate-logo?type=' + pricing.title}>
+                      <Button className="mt-5 w-full">
+                        {pricing.button}
+                      </Button>
+                    </Link>
+                    :
+                    <SignInButton mode='modal' forceRedirectUrl={'/generate-logo?type=' + pricing.title}>
+                      <Button className="mt-5 w-full">
+                        {pricing.button}
+                      </Button>
+                    </SignInButton>
                 }
+
               </div>
-
-              {
-                user ?
-                  <Link href={'/generate-logo?type=' + pricing.title}>
-                    <Button className="mt-5">
-                      {pricing.button}
-                    </Button>
-                  </Link>
-                  :
-                  <SignInButton mode='modal' forceRedirectUrl={'/generate-logo?type=' + pricing.title}>
-                    <Button className="mt-5">
-                      {pricing.button}
-                    </Button>
-                  </SignInButton>
-              }
-
-            </div>
-          ))
-        }
+            ))
+          }
+        </div>
       </div>
+
+
+
 
     </div>
   )

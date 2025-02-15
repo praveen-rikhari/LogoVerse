@@ -22,22 +22,22 @@ export default {
         '⚫ Generate unlimited logos for free',
         '⚫ Longer wait times',
         '⚫ Wait time: 30 seconds to 3 minutes',
-        '⚫ Limited Design Options and Quality',
-        '⚫ Slow (Not Recommended)'
+        '⚫ Easy to download in png format.',
+        '⚫ Saves your logos to Dashboard'
       ],
       button: 'Generate Free'
     },
-    {
-      title: 'Premium',
-      icon: '/thunder.png',
-      features: [
-        '⚫ Generate unlimited logos',
-        '⚫ Shorter wait times',
-        '⚫ Wait time: Less than 10 seconds',
-        '⚫ Only 5 Credits',
+    // {
+    //   title: 'Premium',
+    //   icon: '/thunder.png',
+    //   features: [
+    //     '⚫ Generate unlimited logos',
+    //     '⚫ Shorter wait times',
+    //     '⚫ Wait time: Less than 10 seconds',
+    //     '⚫ Only 5 Credits',
 
-      ],
-      button: 'Generate For 1 Credit'
-    }
+    //   ],
+    //   button: 'Generate For 1 Credit'
+    // }
   ],
 };
