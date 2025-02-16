@@ -27,18 +27,18 @@ function CreateLogo() {
         <div className='mt-28 p-10 border rounded-xl 2xl:mx-72'>
             {
                 step == 1 ?
-                    <LogoTitle onHandleInputChange={(v) => onHandleInputChange('title', v)} formData={formData}/> : 
-                step == 2 ?
-                    <LogoDesc onHandleInputChange={(v) => onHandleInputChange('desc', v)} formData={formData}/>:
-                step == 3 ?
-                    <LogoPalette onHandleInputChange={(v) => onHandleInputChange('palette', v)} formData={formData}/>:
-                step == 4 ?
-                    <LogoDesigns onHandleInputChange={(v) => onHandleInputChange('design', v)} formData={formData}/> : 
-                step == 5 ?
-                    <LogoIdea onHandleInputChange={(v) => onHandleInputChange('idea', v)} formData={formData}/> : 
-                step == 6 ?
-                    <PricingModel onHandleInputChange={(v) => onHandleInputChange('pricing', v)} formData={formData}/> : 
-                null
+                    <LogoTitle onHandleInputChange={(v) => onHandleInputChange('title', v)} formData={formData} /> :
+                    step == 2 ?
+                        <LogoDesc onHandleInputChange={(v) => onHandleInputChange('desc', v)} formData={formData} /> :
+                        step == 3 ?
+                            <LogoPalette onHandleInputChange={(v) => onHandleInputChange('palette', v)} formData={formData} /> :
+                            step == 4 ?
+                                <LogoDesigns onHandleInputChange={(v) => onHandleInputChange('design', v)} formData={formData} /> :
+                                step == 5 ?
+                                    <LogoIdea onHandleInputChange={(v) => onHandleInputChange('idea', v)} formData={formData} /> :
+                                    step == 6 ?
+                                        <PricingModel onHandleInputChange={(v) => onHandleInputChange('pricing', v)} formData={formData} /> :
+                                        null
             }
 
             <div className='flex justify-between items-center mt-10'>
@@ -47,10 +47,12 @@ function CreateLogo() {
                         <ArrowLeft /> Back
                     </Button>
                 }
+                {
+                    step !== 6 && <Button onClick={() => setStep(step + 1)}>
+                        <ArrowRight />Next
+                    </Button>
+                }
 
-                <Button onClick={() => setStep(step + 1)}>
-                    <ArrowRight />Next
-                </Button>
             </div>
         </div>
     )

@@ -93,7 +93,7 @@ function GenerateLogo() {
               </div>
             </div>
           ) : (
-            <p className="text-gray-500 text-lg">No logo generated yet.</p>
+            <p className="text-gray-500 text-lg">No logo generated beacuse the API is now Paid. Sorry for the inconvenience.</p>
           )
         )
       }

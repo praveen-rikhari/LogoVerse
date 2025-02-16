@@ -18,7 +18,7 @@ export async function POST(req) {
             AIPrompt,
             {
                 headers: {
-                    Authorization: "Bearer " + process.env.HUGGING_FACE_API_KEYY,
+                    Authorization: "Bearer " + process.env.HUGGING_FACE_API_KEY,
                     "Content-Type": "application/json",
                 },
                 responseType: "arraybuffer"
