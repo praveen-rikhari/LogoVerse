@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# LogoVerse - AI-Powered Logo Generator
 
-## Getting Started
+LogoVerse is an AI-powered logo generation application that helps users create logos for their brands, businesses, and projects effortlessly. Utilizing cutting-edge AI technologies, LogoVerse provides a seamless and intuitive experience for designing logos with customization options.
 
-First, run the development server:
+## 🚀 Live Demo
+[🔗 LogoVerse Live](https://logo-verse.vercel.app/)
+
+## ✨ Features
+- **AI-Powered Logo Generation**: Uses the Gemini Google API and Hugging Face API to generate unique logos.
+- **User-Friendly Interface**: Clean and intuitive UI built with Next.js and Tailwind CSS.
+- **Customization Options**:
+  - Input logo title and description.
+  - Select a color palette.
+  - Choose a logo design idea.
+- **Authentication**: Secure login and authentication powered by Clerk.
+- **Data Storage**: User-generated logos are stored securely using Firebase.
+- **Fast and Scalable**: Hosted on Vercel for optimal performance.
+
+## 🛠️ Tech Stack
+- **Frontend**: Next.js, Tailwind CSS
+- **Backend APIs**: Gemini Google API, Hugging Face API
+- **Authentication**: Clerk
+- **Database & Storage**: Firebase
+- **Hosting**: Vercel
+
+## 📌 How It Works
+1. Sign in using Clerk authentication.
+2. Enter details about your logo (title, description, design idea, and color palette).
+3. The AI generates a unique logo based on your inputs.
+4. Download or save the generated logo to Firebase.
+
+## 🏗️ Installation & Setup
+To run the project locally, follow these steps:
 
 ```bash
+# Clone the repository
+git clone https://github.com/praveen-rikhari/LogoVerse.git
+cd LogoVerse
+
+# Install dependencies
+npm install
+
+# Create a .env file and add the necessary API keys and credentials
+
+# Run the development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then, open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+Made with ❤️ by [Parveen Rikhari](https://github.com/praveen-rikhari)
